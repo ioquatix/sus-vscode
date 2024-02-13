@@ -183,8 +183,6 @@ export class Project implements vscode.Disposable {
 		this.controller.resolveHandler = this.resolveTree.bind(this);
 		
 		this.controller.createRunProfile('Run', vscode.TestRunProfileKind.Run, this.runHandler.bind(this), true, undefined, true);
-		
-		// This doesn't work yet: https://github.com/microsoft/vscode/issues/123713#issuecomment-1830274913
-		// this.controller.createRunProfile('Coverage', vscode.TestRunProfileKind.Coverage, this.runHandler.bind(this), true, undefined, true);
+		this.controller.createRunProfile('Coverage', vscode.TestRunProfileKind.Coverage, this.runHandler.bind(this), true, undefined, true);
 	}
 }

@@ -10,6 +10,7 @@
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
 			"args": [
+				"--enable-proposed-api", "socketry.sus-vscode",
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"${workspaceFolder}/sus"
 			],
